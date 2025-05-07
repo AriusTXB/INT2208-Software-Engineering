@@ -101,8 +101,3 @@ pytest
 - Nguyen Dang Dao
 
 Group 3 — INT2208 3, UET - VNU, 05/2025
-
----
-
-## 📄 License
-MIT — feel free to use, modify, and share.

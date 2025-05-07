@@ -1,0 +1,24 @@
+[
+    {
+        "_id": { "$oid": "681af162d3f53033cb884866" },
+        "comment_id": "comment_001",
+        "news_id": "001",
+        "user_id": "user_123",
+        "content": "I think this technology will be a game changer in the healthcare industry.",
+        "created_at": {
+          "$date": { "$numberLong": "1745583000000" }
+        },
+        "is_approved": true
+    },
+    {
+        "_id": { "$oid": "681af171d3f53033cb884867" },
+        "comment_id": "comment_002",
+        "news_id": "001",
+        "user_id": "user_124",
+        "content": "I'm skeptical about the implementation of AI in healthcare.",
+        "created_at": {
+          "$date": { "$numberLong": "1745583300000" }
+        },
+        "is_approved": true
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "_id": { "$oid": "681af18ed3f53033cb884868" },
+        "user_id": "user_123",
+        "username": "john_doe",
+        "email": "johndoe@example.com",
+        "is_premium": true,
+        "favorite_articles": ["001", "003"],
+        "read_history": [
+          {
+            "news_id": "001",
+            "read_at": {
+              "$date": {
+                "$numberLong": "1745584200000"
+              }
+            }
+          },
+          {
+            "news_id": "002",
+            "read_at": {
+              "$date": {
+                "$numberLong": "1745487900000"
+              }
+            }
+          }
+        ],
+        "subscription": {
+          "start_date": {
+            "$date": { "$numberLong": "1735689600000" }
+          },
+          "end_date": {
+            "$date": { "$numberLong": "1767225599000" }
+          }
+        }
+      },
+      {
+        "_id": { "$oid": "681af19fd3f53033cb884869" },
+        "user_id": "user_124",
+        "username": "alice_smith",
+        "email": "alicesmith@example.com",
+        "is_premium": false,
+        "favorite_articles": ["002"],
+        "read_history": [
+          {
+            "news_id": "002",
+            "read_at": {
+              "$date": {
+                "$numberLong": "1745488800000"
+              }
+            }
+          }
+        ],
+        "subscription": {
+          "start_date": {
+            "$date": { "$numberLong": "1740787200000" }
+          },
+          "end_date": {
+            "$date": { "$numberLong": "1756684799000" }
+          }
+        }
+      }
+]

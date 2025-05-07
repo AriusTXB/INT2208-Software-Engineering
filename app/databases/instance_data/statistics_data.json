@@ -1,0 +1,49 @@
+[
+    {
+        "_id": { "$oid": "681af244d3f53033cb884872" },
+        "news_id": "001",
+        "views": { "$numberInt": "1200" },
+        "likes": { "$numberInt": "200" },
+        "comments_count": { "$numberInt": "50" },
+        "favorites_count": { "$numberInt": "100" },
+        "interactions": [
+          {
+            "user_id": "user_123",
+            "action": "view",
+            "timestamp": {
+              "$date": {
+                "$numberLong": "1745584200000"
+              }
+            }
+          },
+          {
+            "user_id": "user_124",
+            "action": "like",
+            "timestamp": {
+              "$date": {
+                "$numberLong": "1745584500000"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "_id": { "$oid": "681af257d3f53033cb884873" },
+        "news_id": "002",
+        "views": { "$numberInt": "800" },
+        "likes": { "$numberInt": "150" },
+        "comments_count": { "$numberInt": "30" },
+        "favorites_count": { "$numberInt": "70" },
+        "interactions": [
+          {
+            "user_id": "user_123",
+            "action": "view",
+            "timestamp": {
+              "$date": {
+                "$numberLong": "1745488200000"
+              }
+            }
+          }
+        ]
+      }
+]

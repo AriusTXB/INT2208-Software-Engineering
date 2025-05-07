@@ -1,0 +1,22 @@
+[
+    {
+        "_id": { "$oid": "681af1d6d3f53033cb88486c" },
+        "payment_id": "payment_001",
+        "user_id": "user_123",
+        "amount": { "$numberDouble": "99.99" },
+        "created_at": {
+          "$date": { "$numberLong": "1735689600000" }
+        },
+        "status": "completed"
+      },
+      {
+        "_id": { "$oid": "681af1ebd3f53033cb88486d" },
+        "payment_id": "payment_002",
+        "user_id": "user_124",
+        "amount": { "$numberDouble": "49.99" },
+        "created_at": {
+          "$date": { "$numberLong": "1740787200000" }
+        },
+        "status": "completed"
+      }
+]

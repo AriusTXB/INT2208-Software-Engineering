@@ -1,0 +1,24 @@
+[
+    {
+        "_id": { "$oid": "681af208d3f53033cb88486e" },
+        "news_id": "003",
+        "title": "The Future of Electric Vehicles",
+        "content": "Electric vehicles are set to dominate the auto industry over the next decade...",
+        "submitted_by_user": "user_123",
+        "status": "waiting",
+        "submitted_at": {
+          "$date": { "$numberLong": "1745589600000" }
+        }
+      },
+      {
+        "_id": { "$oid": "681af210d3f53033cb88486f" },
+        "news_id": "004",
+        "title": "Space Exploration: The New Era",
+        "content": "NASA and private companies are making significant strides in space exploration...",
+        "submitted_by_user": "user_124",
+        "status": "approved",
+        "submitted_at": {
+          "$date": { "$numberLong": "1745591400000" }
+        }
+      }
+]

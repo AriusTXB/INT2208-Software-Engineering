@@ -1,0 +1,24 @@
+[
+    {
+        "_id": { "$oid": "681af26ad3f53033cb884874" },
+        "user_id": "user_123",
+        "start_date": {
+          "$date": { "$numberLong": "1735689600000" }
+        },
+        "end_date": {
+          "$date": { "$numberLong": "1767225599000" }
+        },
+        "status": "active"
+      },
+      {
+        "_id": { "$oid": "681af282d3f53033cb884875" },
+        "user_id": "user_124",
+        "start_date": {
+          "$date": { "$numberLong": "1740787200000" }
+        },
+        "end_date": {
+          "$date": { "$numberLong": "1756684799000" }
+        },
+        "status": "active"
+      }
+]

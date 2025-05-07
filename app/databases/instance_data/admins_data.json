@@ -1,0 +1,17 @@
+[
+    {
+      "_id": { "$oid": "681af0cbd3f53033cb884864" },
+      "admin_id": "admin_001",
+      "username": "admin_john",
+      "email": "adminjohn@example.com",
+      "role": "superadmin"
+    },
+    {
+      "_id": { "$oid": "681af0f5d3f53033cb884865" },
+      "admin_id": "admin_002",
+      "username": "admin_alice",
+      "email": "adminalice@example.com",
+      "role": "content_approver"
+    }
+  ]
+  

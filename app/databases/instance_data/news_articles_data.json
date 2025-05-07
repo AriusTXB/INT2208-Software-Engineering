@@ -1,0 +1,45 @@
+[
+    {
+        "_id": { "$oid": "681af1bbd3f53033cb88486a" },
+        "news_id": "002",
+        "title": "Global Warming and Its Impact on Oceans",
+        "content": "Experts agree that rising temperatures are severely affecting the oceans...",
+        "author": "Alice Smith",
+        "category": "Environment",
+        "publication_date": {
+          "$date": { "$numberLong": "1745487000000" }
+        },
+        "summary": "Global warming is causing irreparable damage to oceans.",
+        "comments": ["602c72b2f9b1d2c0015f4f3b7"],
+        "ratings": [
+          {
+            "user_id": "user_124",
+            "rating": { "$numberInt": "4" },
+            "feedback": "Important issue, well written."
+          }
+        ]
+      },
+      {
+        "_id": { "$oid": "681af1c8d3f53033cb88486b" },
+        "news_id": "001",
+        "title": "New AI Technology Revolutionizes Healthcare",
+        "content": "Recent advancements in AI are transforming healthcare with better diagnosis...",
+        "author": "John Doe",
+        "category": "Technology",
+        "publication_date": {
+          "$date": { "$numberLong": "1745582400000" }
+        },
+        "summary": "AI technology is improving diagnosis in healthcare.",
+        "comments": [
+          "602c72b2f9b1d2c0015f4f3b4",
+          "602c72b2f9b1d2c0015f4f3b5"
+        ],
+        "ratings": [
+          {
+            "user_id": "user_123",
+            "rating": { "$numberInt": "5" },
+            "feedback": "Excellent article!"
+          }
+        ]
+      }
+]

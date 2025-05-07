@@ -4,3 +4,6 @@ class ArticleRepository:
 
     async def get_by_id(self, article_id: str):
         return await self.col.find_one({"_id": article_id})
+
+    async def get_all_premium(self):
+        return await self.col.find({"is_premium": True}).to_list(100)

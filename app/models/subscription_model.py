@@ -1,9 +1,11 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
+from datetime import date
 
 class SubscriptionModel(BaseModel):
-    id: Optional[str]
+    subscription_id: Optional[str] = Field(alias="_id")
     user_id: str
-    start_date: str
-    end_date: Optional[str]
-    active: bool = True
+    start_date: Optional[date] = None
+    end_date: Optional[date] = None
+    plan: str 
+    status: str 

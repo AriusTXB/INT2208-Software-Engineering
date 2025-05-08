@@ -1,4 +1,4 @@
-from app.repositories.stats_repo import StatisticsRepository
+from app.repositories.statistics_repository import StatisticsRepository
 
 class StatisticsService:
     def __init__(self, stats_col):

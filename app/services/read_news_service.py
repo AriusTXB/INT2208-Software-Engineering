@@ -1,9 +1,9 @@
-from app.repositories.article_repo import ArticleRepository
-from app.repositories.user_repo import UserRepository
+from app.repositories.news_article_repository import NewsArticleRepository
+from app.repositories.user_repository import UserRepository
 
 class ReadNewsService:
     def __init__(self, article_col, user_col):
-        self.article_repo = ArticleRepository(article_col)
+        self.article_repo = NewsArticleRepository(article_col)
         self.user_repo = UserRepository(user_col)
 
     async def show_news(self, news_id: str):

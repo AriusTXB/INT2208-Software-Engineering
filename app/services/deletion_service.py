@@ -1,4 +1,4 @@
-from app.repositories.user_repo import UserRepository
+from app.repositories.user_repository import UserRepository
 
 class DeletionService:
     def __init__(self, user_col):

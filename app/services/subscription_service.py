@@ -1,4 +1,4 @@
-from app.repositories.subscription_repo import SubscriptionRepository
+from app.repositories.subscription_repository import SubscriptionRepository
 from datetime import datetime
 
 class SubscriptionService:

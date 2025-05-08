@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online News Recommend</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/content.css">
+    <link rel="stylesheet" href="../CSS/loginForm.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<!-- Main Header -->
+<header id="main-header">
+    <div class="navbar1">
+        <div class="logo">
+            <a href="HomepageGuest.html" class="logo-link">
+                <img src="../resources/website_logo.jpg" alt="Online News Recommend">
+                <div class="logo-text">
+                    <div class="line1">Online News</div>
+                    <div class="line2">Recommend</div>
+                </div>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="HomepageGuest.html">News</a></li>
+                <li><a href="#">Economics</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li class="more-subjects">
+                    <a href="#" id="more-button">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Science & Technology</a></li>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Cultures</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Climate Crisis</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-actions" id="navActions">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <a href="Login.html" class="loginBtn">Sign in</a>
+        </div>
+    </div>
+    <div id="searchOverlay" class="search-overlay">
+        <div class="container">
+            <input type="text" placeholder="Search for news...">
+            <button id="closeSearchBtn">✕</button>
+        </div>
+    </div>
+    <div class="navbar2">
+        <nav class="second-nav">
+            <a href="#">Breaking News</a>
+            <div class="divider"></div>
+            <a href="#">Trending News</a>
+            <div class="divider"></div>
+            <a href="#">Latest News</a>
+            <div class="divider"></div>
+            <a href="#">Categories</a>
+        </nav>
+        <div class="createBtn" id="createBtn"></div>
+    </div>
+</header>
+
+<!--article content-->
+<article class="article-page">
+    <div class="container">
+        <div class="article-card">
+            <div class="article-category">
+                <a href="HomepageGuest.html#breaking" class="category">Breaking News</a>
+            </div>
+            <div class="article-title">
+            <h1>Chicago Fire owner is considering building privately-funded, soccer-specific stadium in the city</h1>
+            </div>
+            <div class="article-image">
+                <img src="../resources/1.jpg" alt="Article Image">
+            </div>
+            <div class="article-metal">
+                <div class="author-info">
+                    <span class="author-name">By Paul Tenorio</span>
+                    <span class="publish-date">Published April 24, 2025</span>
+                </div>
+                <div class="article-interaction">
+                    <button class="interaction-button love-button"><i class="fa-regular fa-heart"></i></button>
+                    <button class="interaction-button"><i class="fa-regular fa-comment"></i></button>
+                    <button class="interaction-button"><i class="fa-regular fa-bookmark"></i></button>
+                    <button class="interaction-button"><i class="fa-solid fa-share"></i></button>
+                </div>
+            </div>
+            <button class="summarize-button" onclick="showSpinner()">Summarize this article</button>
+            <div class="loading-spinner" style="display: none; text-align: center; margin-top: 10px;">
+                Summarizing article...
+            </div>
+            <div id="spinner" class="spinner" style="display: none;"></div>            
+            <div class="main-content">
+                <p>Chicago Fire owner Joe Mansueto said the team is considering building a soccer-specific stadium in Chicago, calling it the “last piece of the puzzle with this club.” On Thursday, Mansueto said the club, which currently plays at Soldier Field, has started to tour potential sites in the city.</p>
+
+                <p>After buying 100 percent of the Fire in 2019, Mansueto moved the team from a soccer-specific stadium in Bridgeview, Illinois back to Soldier Field, which it shares with the NFL’s Chicago Bears. As a secondary tenant in the Chicago Park District-owned stadium, the Fire loses out on dates for games to both the Bears and concerts held in the venue.</p>
+                
+                <p>“The warm summer days and fall days are really precious, and we’d love to have as many of those days as possible, but we often get conflicted out with the Bears and concerts,” Mansueto said at the press conference introducing Gregg Berhalter as the team’s new director of football and head coach. “We prefer not to have to play on the bookends when it’s cold in Chicago in the winter, early spring or late in the fall. And so the scheduling is certainly an issue with Soldier Field. Certain sponsorship categories are blocked out, non-gameday access to the pitch is sometimes an issue.”</p>
+
+                <p>In an interview with The Athletic after the press conference, Mansueto said the team has toured three sites in Chicago: a lakefront site in the Bronzeville neighborhood that was the former home of the Michael Reese Hospital and Medical Center; The 78, a development in South Loop where the Chicago White Sox have proposed building a new stadium; and Lincoln Yards, a development along the north branch of the Chicago River in the Lincoln Park neighborhood on the north side of the city.</p>
+
+                <p>“They all have their pros and cons,” Mansueto said. “We have retained some consultants to do physical feasibility analysis, but now that the Endeavor Health Performance Center is done, we’re turning our attention to the stadium. It’s early going, and I think you’ll see more in the next couple of years on that.”</p>
+
+                <p>The Fire is set to open a new training facility in the city, the Endeavor Health Performance Center, this spring. The $100 million privately-funded facility is based on the west side of the city near the Medical District neighborhood, about a mile and a half south of the United Center, home of the NBA’s Chicago Bulls and NHL’s Chicago Blackhawks.</p>
+
+                <p>A stadium within the city limits would be a potential game-changer for a club that has struggled to resonate in the sports-rich Chicago market. The third-biggest television market in the United States with a rich soccer history, Chicago has long been considered a sleeping giant in MLS. But the team has struggled over the last decade and a half, making the playoffs just twice since 2009. A move to SeatGeek Stadium in Bridgeview, a suburb 15 miles outside of the city, in 2006, proved to be another barrier to building the fan base. The stadium was difficult to reach via public transportation, and the arrangement with the village limited the financial upside. The Chicago Red Stars in the NWSL still use the facility.</p>
+
+                <p>The Fire moved back to Soldier Field just as Mansueto bought controlling interest in the team from previous owner Andrew Hauptman. Mansueto paid $60.5 million to get the Fire out of its lease with the Village of Bridgeview early.</p>
+
+                <img src="../resources/2.jpg" class="picture">
+
+                <p>A new venue would likely generate renewed excitement around a team that won the domestic double — MLS Cup and the U.S. Open Cup — in its first year of existence in 1998.</p>
+
+                <p>“A smaller venue I think would work well for us and help us connect further with our fan base,” Mansueto said. “I think it would be another element in re-energizing the club.”</p>
+
+                <p>The Fire is the third Chicago professional men’s team to announce it’s looking to build a new stadium, joining the Bears and the White Sox. The Bears have turned focus back to the Soldier Field site, while the White Sox plans remain up in the air. The Athletic reported Thursday that owner Jerry Reinsdorf was open to selling the team. One of the major barriers to those projects is that the teams are asking for public funds to build stadiums. The White Sox reportedly asked for more than $1 billion in public funds, according to the Chicago Tribune, while the Bears’ stadium project could cost taxpayers as much as $2.4 billion of the total $4.75 billion cost of the project, according to WTTW.</p>
+
+                <p>Mansueto, the founder, CEO and chairman of Morningstar, with a reported net worth of $7.1 billion, said the team would privately finance a new stadium.</p>
+
+                <p>“My personal view is that stadiums are not a great investment,” Mansueto said. “They’re big, costly to maintain, sit empty most of the time. And so to the extent that they create value, most of that accrues to the sports team, not the municipality. So to me, it’s fair that the sports team should own it. Moreover, here in Illinois, in the City of Chicago, our finances are strained. Teachers want more money, law enforcement needs money, pension obligations. Our city and state don’t have the funds, to be candid, and so to me, we would privately finance it.”</p>
+            </div>
+            <div class="main-content active">
+                <h2>Chicago Fire Owner Explores Building New Soccer-Specific Stadium</h2>
+                <p>Chicago Fire owner Joe Mansueto announced the club is considering constructing a soccer-specific stadium in Chicago, calling it the "last piece of the puzzle" for the team. Currently playing at Soldier Field, the Fire faces scheduling conflicts with the NFL’s Chicago Bears and concerts, limiting prime game dates and sponsorship opportunities. Mansueto emphasized the need for a venue that avoids cold-weather matches and allows better fan engagement. The team has evaluated three potential city sites: the former Michael Reese Hospital location in Bronzeville, the South Loop’s "The 78" development (also eyed by the White Sox), and Lincoln Yards along the Chicago River.</p>
+                <p>The Fire’s history has been marked by challenges, including a poorly located suburban stadium in Bridgeview that hindered fan accessibility. Since returning to Soldier Field in 2019, the club has sought a stronger identity in Chicago’s competitive sports market. A new stadium, fully privately financed by Mansueto (unlike the publicly subsidized proposals from the Bears and White Sox), could revitalize the franchise. The move aligns with the upcoming opening of the Fire’s $100 million training facility, signaling a broader effort to elevate the team’s profile and performance in MLS.</p>
+            </div>
+        </div>
+        <div class="separator">
+            <div class="line"></div>
+            <span class="separator-text">Comments</span>
+            <div class="line"></div>
+        </div>
+        <div class="comment"></div>
+    </div>
+</article>  
+
+<!--Footer-->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="HomepageGuest.html">Online News Recommend</a>
+                <p>Delivering thought-provoking journalism and in-depth analysis on today's most important stories.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="HomepageGuest.html">Home</a></li>
+                        <li><a href="#breaking">Breaking News</a></li>
+                        <li><a href="#latest">Latest News</a></li>
+                        <li><a href="#trending">Trending News</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h3>Legality</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Online News Recommend. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/LoadNews.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navActions = document.getElementById("navActions");
+        const createBtn = document.getElementById("createBtn");
+        const checkLogIn = sessionStorage.getItem("loggedInUser");
+    
+        function setupSearchButton() {
+            const newSearchButton = document.getElementById("searchBtn");
+            const searchOverlay = document.getElementById("searchOverlay");
+            if(newSearchButton && searchOverlay) {
+                newSearchButton.addEventListener('click', function() {
+                    searchOverlay.classList.add('active');
+                    searchOverlay.querySelector('input').focus();
+                });
+            }
+        }
+
+        function setupAccountDropdown() {
+            const accountBtn = document.getElementById('accountBtn');
+            const accountDropdown = document.getElementById('accountDropdown');
+    
+            if (accountBtn && accountDropdown) {
+                accountBtn.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    accountDropdown.classList.toggle('hidden');
+                });
+
+                // Đóng dropdown nếu click ra ngoài
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.account-menu-container')) {
+                        accountDropdown.classList.add('hidden');
+                    }
+                });
+            }
+        }
+
+        if (checkLogIn) {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="notificationBtn"><i class="fas fa-bell"></i></button>
+                <div class="account-menu-container">
+                    <button id="accountBtn"><i class="fas fa-user-circle"></i></button>
+                    <ul id="accountDropdown" class="account-dropdown hidden">
+                        <li><a href="accountPage.html">My Account</a></li>
+                        <li><a href="myPosts.html">My Posts</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="savedArticles.html">Saved Articles</a></li>
+                    </ul>
+                </div>
+            `;
+            createBtn.innerHTML = `
+                <button id="compose"><a href="writePage.html">Create an article</a></button>
+            `;
+        } else {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <a href="Login.html" class="loginBtn">Sign in</a>
+            `;
+        }
+        setupSearchButton();
+        setupAccountDropdown();
+    });
+</script>
+</body>
+</html>

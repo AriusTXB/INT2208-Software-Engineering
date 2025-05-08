@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online News Recommend</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/content.css">
+    <link rel="stylesheet" href="../CSS/loginForm.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!-- Main Header -->
+<header id="main-header">
+    <div class="navbar1">
+        <div class="logo">
+            <a href="HomepageGuest.html" class="logo-link">
+                <img src="../resources/website_logo.jpg" alt="Online News Recommend">
+                <div class="logo-text">
+                    <div class="line1">Online News</div>
+                    <div class="line2">Recommend</div>
+                </div>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="HomepageGuest.html">News</a></li>
+                <li><a href="#">Economics</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li class="more-subjects">
+                    <a href="#" id="more-button">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Science & Technology</a></li>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Cultures</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Climate Crisis</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <a href="Login.html" class="loginBtn">Sign in</a>
+        </div>
+    </div>
+    <div id="searchOverlay" class="search-overlay">
+        <div class="container">
+            <input type="text" placeholder="Search for news...">
+            <button id="closeSearchBtn">✕</button>
+        </div>
+    </div>
+    <div class="navbar2">
+        <nav class="second-nav">
+            <a href="#">Breaking News</a>
+            <div class="divider"></div>
+            <a href="#">Trending News</a>
+            <div class="divider"></div>
+            <a href="#">Latest News</a>
+            <div class="divider"></div>
+            <a href="#">Categories</a>
+            </nav>
+    </div>
+</header>
+<!--Login Form-->
+<section class="login-form">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Nice To Meet You!</h2>
+            <p class="login-box-title">Sign in to access your account</p>
+
+            <div class="login-box-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <div id="loginForm" class="auth-form active">
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="submit-button">Sign in</button>
+
+                    <!--Dòng phân cách-->
+                    <div class="separator">
+                        <div class="line"></div>
+                        <span class="separator-text">or login with</span>
+                        <div class="line"></div>
+                    </div>
+                    <!--Social login-->
+                    <div class="social-login">
+                        <button type="button" class="google-btn">
+                            <i class="fab fa-google"></i> Sign up with Google
+                        </button>
+                        <button type="button" class="facebook-btn">
+                            <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="registerForm" class="auth-form">
+                <form>
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-options">
+                        <div class="terms-agreement">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+        <div class="vertical-divider"></div>
+        <!-- Cột bên phải: Phần giới thiệu -->
+        <div class="login-info">
+            <h2>Welcome to ON Recommend!</h2>
+            <p>Connect and join with us!</p>
+            <p>It’s free to join now.</p>
+        </div>
+    </div>
+</section>
+<script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/LoadNews.js"></script>
+</body>
+</html>

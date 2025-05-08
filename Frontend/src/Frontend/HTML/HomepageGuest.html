@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online News Recommend</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<!-- Main Header -->
+<header id="main-header">
+    <div class="navbar1">
+        <div class="logo">
+            <a href="HomepageGuest.html" class="logo-link">
+                <img src="../resources/website_logo.jpg" alt="Online News Recommend">
+                <div class="logo-text">
+                    <div class="line1">Online News</div>
+                    <div class="line2">Recommend</div>
+                </div>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="HomepageGuest.html">News</a></li>
+                <li><a href="#">Economics</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li class="more-subjects">
+                    <a href="#" id="more-button">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Science & Technology</a></li>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Cultures</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Climate Crisis</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-actions" id="navActions">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <a href="Login.html" class="loginBtn">Sign in</a>
+        </div>
+    </div>
+    <div id="searchOverlay" class="search-overlay">
+        <div class="container">
+            <input type="text" placeholder="Search for news...">
+            <button id="closeSearchBtn">✕</button>
+        </div>
+    </div>
+    <div class="navbar2">
+        <nav class="second-nav">
+            <a href="#">Breaking News</a>
+            <div class="divider"></div>
+            <a href="#">Trending News</a>
+            <div class="divider"></div>
+            <a href="#">Latest News</a>
+            <div class="divider"></div>
+            <a href="#">Categories</a>
+        </nav>
+        <div class="createBtn" id="createBtn"></div>
+    </div>
+</header>
+
+<!--Breaking News-->
+<section class="breaking-news" id="breaking">
+    <div class="container">
+        <h2 class="section-title">Breaking News</h2>
+        <div class="specific-articles">
+            <div class="main-article" id="main-article-breaking"></div>
+            <div class="side-articles" id="side-articles-breaking"></div>
+        </div>
+    </div>
+</section>
+
+<!--Latest News-->
+<section class="latest-news" id="latest">
+    <div class="container">
+        <h2 class="section-title">Latest News</h2>
+        <div class="specific-articles">
+            <div class="main-article" id="main-article-latest"></div>
+            <div class="side-articles" id="side-articles-latest"></div>
+        </div>
+    </div>
+</section>
+
+<!--Trending News-->
+<section class="trending-news" id="trending">
+    <div class="container">
+        <h2 class="section-title">Trending News</h2>
+        <div class="specific-articles">
+            <div class="main-article" id="main-article-trending"></div>
+            <div class="side-articles" id="side-articles-trending"></div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="HomepageGuest.html">Online News Recommend</a>
+                <p>Delivering thought-provoking journalism and in-depth analysis on today's most important stories.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="HomepageGuest.html">Home</a></li>
+                        <li><a href="#breaking">Breaking News</a></li>
+                        <li><a href="#latest">Latest News</a></li>
+                        <li><a href="#trending">Trending News</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h3>Legality</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Online News Recommend. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/LoadNews.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navActions = document.getElementById("navActions");
+        const createBtn = document.getElementById("createBtn");
+        const checkLogIn = sessionStorage.getItem("loggedInUser");
+    
+        function setupSearchButton() {
+            const newSearchButton = document.getElementById("searchBtn");
+            const searchOverlay = document.getElementById("searchOverlay");
+            if(newSearchButton && searchOverlay) {
+                newSearchButton.addEventListener('click', function() {
+                    searchOverlay.classList.add('active');
+                    searchOverlay.querySelector('input').focus();
+                });
+            }
+        }
+
+        function setupAccountDropdown() {
+            const accountBtn = document.getElementById('accountBtn');
+            const accountDropdown = document.getElementById('accountDropdown');
+    
+            if (accountBtn && accountDropdown) {
+                accountBtn.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    accountDropdown.classList.toggle('hidden');
+                });
+
+                // Đóng dropdown nếu click ra ngoài
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.account-menu-container')) {
+                        accountDropdown.classList.add('hidden');
+                    }
+                });
+            }
+        }
+
+        if (checkLogIn) {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="notificationBtn"><i class="fas fa-bell"></i></button>
+                <div class="account-menu-container">
+                    <button id="accountBtn"><i class="fas fa-user-circle"></i></button>
+                    <ul id="accountDropdown" class="account-dropdown hidden">
+                        <li><a href="accountPage.html">My Account</a></li>
+                        <li><a href="myPosts.html">My Posts</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="savedArticles.html">Saved Articles</a></li>
+                    </ul>
+                </div>
+            `;
+            createBtn.innerHTML = `
+                <button id="compose"><a href="writePage.html">Create an article</a></button>
+            `;
+        } else {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <a href="Login.html" class="loginBtn">Sign in</a>
+            `;
+        }
+        setupSearchButton();
+        setupAccountDropdown();
+    });
+</script>
+</body>
+</html>

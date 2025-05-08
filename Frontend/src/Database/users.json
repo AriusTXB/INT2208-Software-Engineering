@@ -1,0 +1,17 @@
+[
+    {
+        "email": "tungkhanh210805@gmail.com",
+        "password": "12345678",
+        "name": "Nguyen Khanh Tung"
+    },
+    {
+        "email": "baotx.hrt@gmail.com",
+        "password": "ilovevytech30",
+        "name": "Tran Xuan Bao"
+    },
+    {
+        "email": "toanhs.hrt@gmail.com",
+        "password": "phochunhiem",
+        "name": "Hoang Sy Toan"
+    }
+]

@@ -1,0 +1,43 @@
+[
+    {
+        "id": "1",
+        "title": "Chicago Fire owner calls soccer-specific stadium the 'last piece of the puzzle'",
+        "author": "Paul Tenorio",
+        "date": "Yesterday",
+        "image": "../resources/1.jpg",
+        "description": "Mansueto said the club has started to tour possible sites."
+    },
+    {
+        "id": "2",
+        "title": "How much will Trump’s new tariffs hurt other countries and US consumers?",
+        "author": "Alice Morgan",
+        "date": "2 days ago",
+        "image": "",
+        "description": ""
+    },
+    {
+        "id": "3",
+        "title": "Have Trump’s tariffs killed US-Africa preferential trade?",
+        "author": "Shola Lawal",
+        "date": "1 days ago",
+        "image": "",
+        "description": ""
+    },
+    {
+        "id": "4",
+        "title": "Palestinian-US teen killed by Israeli forces in occupied West Bank",
+        "author": "",
+        "date": "Today",
+        "image": "",
+        "description": ""
+    },
+    {
+        "id": "5",
+        "title": "Why Trump’s Economic Disruption Will Be Hard to Reverse",
+        "author": "",
+        "date":"1 days ago",
+        "image": "",
+        "description": ""
+    }
+  ]
+  

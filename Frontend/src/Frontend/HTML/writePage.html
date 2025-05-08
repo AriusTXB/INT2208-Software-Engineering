@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online News Recommend</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<!-- Main Header -->
+<header id="main-header">
+    <div class="navbar1">
+        <div class="logo">
+            <a href="HomepageGuest.html" class="logo-link">
+                <img src="../resources/website_logo.jpg" alt="Online News Recommend">
+                <div class="logo-text">
+                    <div class="line1">Online News</div>
+                    <div class="line2">Recommend</div>
+                </div>
+            </a>
+        </div>
+        <div class="divider"></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="HomepageGuest.html">News</a></li>
+                <li><a href="#">Economics</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li class="more-subjects">
+                    <a href="#" id="more-button">More</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Science & Technology</a></li>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Cultures</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Climate Crisis</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-actions" id="navActions">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+            <a href="Login.html" class="loginBtn">Sign in</a>
+        </div>
+    </div>
+    <div id="searchOverlay" class="search-overlay">
+        <div class="container">
+            <input type="text" placeholder="Search for news...">
+            <button id="closeSearchBtn">✕</button>
+        </div>
+    </div>
+    <div class="navbar2">
+        <nav class="second-nav">
+            <a href="HomepageGuest.html#breaking">Breaking News</a>
+            <div class="divider"></div>
+            <a href="HomepageGuest.html#trending">Trending News</a>
+            <div class="divider"></div>
+            <a href="HomepageGuest.html#latest">Latest News</a>
+            <div class="divider"></div>
+            <a href="#">Categories</a>
+        </nav>
+        <div class="createBtn" id="createBtn"></div>
+    </div>
+</header>
+
+<!-- Create articles -->
+<section class="writerSection">
+    <div class="container">
+        <h2>Starting your own news</h2>
+
+        <div class="title-options">
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="">Select category</option>
+                <option value="Economics">Economics</option>
+                <option value="Politics">Politics</option>
+                <option value="Sports">Sports</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Science & Technology">Science & Technology</option>
+                <option value="Environment">Environment</option>
+                <option value="Cultures">Cultures</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Education">Education</option>
+                <option value="Climate Crisis">Climate Crisis</option>
+                <option value="Arts">Arts</option>
+            </select>
+        </div>
+
+        <div class="content-boxes">
+            <button onclick="addTextBlock()">➕ Add Text</button>
+            <button onclick="addImageBlock()">🖼️ Add Image</button>
+        </div>
+
+        <div id="editor">
+            <!-- Content blocks display here -->
+        </div>
+
+        <div class="final-actions">
+            <button id="saveDraftBtn">Save Draft</button>
+            <button id="submitArticleBtn">Submit Article</button>
+        </div>
+    </div>
+</section>
+
+<script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/createNews.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navActions = document.getElementById("navActions");
+        const createBtn = document.getElementById("createBtn");
+        const checkLogIn = sessionStorage.getItem("loggedInUser");
+    
+        function setupSearchButton() {
+            const newSearchButton = document.getElementById("searchBtn");
+            const searchOverlay = document.getElementById("searchOverlay");
+            if(newSearchButton && searchOverlay) {
+                newSearchButton.addEventListener('click', function() {
+                    searchOverlay.classList.add('active');
+                    searchOverlay.querySelector('input').focus();
+                });
+            }
+        }
+
+        function setupAccountDropdown() {
+            const accountBtn = document.getElementById('accountBtn');
+            const accountDropdown = document.getElementById('accountDropdown');
+    
+            if (accountBtn && accountDropdown) {
+                accountBtn.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    accountDropdown.classList.toggle('hidden');
+                });
+
+                // Đóng dropdown nếu click ra ngoài
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.account-menu-container')) {
+                        accountDropdown.classList.add('hidden');
+                    }
+                });
+            }
+        }
+
+        if (checkLogIn) {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button id="notificationBtn"><i class="fas fa-bell"></i></button>
+                <div class="account-menu-container">
+                    <button id="accountBtn"><i class="fas fa-user-circle"></i></button>
+                    <ul id="accountDropdown" class="account-dropdown hidden">
+                        <li><a href="accountPage.html">My Account</a></li>
+                        <li><a href="myPosts.html">My Posts</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="savedArticles.html">Saved Articles</a></li>
+                    </ul>
+                </div>
+            `;
+            createBtn.innerHTML = `
+                <button id="compose"><a href="writePage.html">Create an article</a></button>
+            `;
+        } else {
+            navActions.innerHTML = `
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <a href="Login.html" class="loginBtn">Sign in</a>
+            `;
+        }
+        setupSearchButton();
+        setupAccountDropdown();
+    });
+</script>
+</body>
+</html>
